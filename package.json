@@ -1,6 +1,6 @@
 {
-  "name": "bstrap-starter",
-  "version": "1.0.0",
+  "name": "vuejs-wo-build-to-site",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {

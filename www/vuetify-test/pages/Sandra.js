@@ -1,5 +1,11 @@
 export default {
+	components: {
+		Cooking: () => import("../components/Cooking.js")
+	},
 	template: `
+<v-row>
+	<Cooking></Cooking>
+
   <v-card
     max-width="375"
     class="mx-auto"
@@ -117,5 +123,6 @@ export default {
       </v-list-item>
     </v-list>
   </v-card>
+</v-row>
 	`
 }

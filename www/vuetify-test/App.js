@@ -8,7 +8,9 @@ const router = new VueRouter({
 		{ path: "/EditList", component: () => import("./pages/EditList.js") },
 		{ path: "/CrudTable", component: () => import("./pages/CrudTable.js") },
 		{ path: "/Sandra", component: () => import("./pages/Sandra.js") },
-		{ path: "/People", component: () => import("./pages/People.js") }
+		{ path: "/People", component: () => import("./pages/People.js") },
+		{ path: "/Discover", component: () => import("./pages/Discover.js") },
+		{ path: "/Calendar", component: () => import("./pages/Calendar.js") }
 	]
 });
 
@@ -25,6 +27,8 @@ new Vue({
 				{title: 'CrudTable', link: '/CrudTable', icon: 'mdi-home' },
 				{title: 'Sandra', link: '/Sandra', icon: 'mdi-home' },
 				{title: 'People', link: '/People', icon: 'mdi-home' },
+				{title: 'Discover', link: '/Discover', icon: 'mdi-home' },
+				{title: 'Calendar', link: '/Calendar', icon: 'mdi-home' }
 			]
 		};	
 	}

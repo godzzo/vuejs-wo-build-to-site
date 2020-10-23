@@ -1,0 +1,53 @@
+<html>
+<head>
+
+<script src="./js/vue-kinesis.umd.js"></script>
+
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
+	// import VueKinesis from 
+
+	Vue.use(VueKinesis)
+
+	Vue.component('test-kinesis', {
+		template: `
+			<kinesis-container
+				:duration="1500"
+				easing="cubic-bezier(0.23, 1, 0.32, 1)"
+			>
+				<kinesis-element
+					:strength="15"
+					type="translate"
+					tag="div"
+				>
+					<span class="icon-green" />
+				</kinesis-element>
+				<kinesis-element
+					:strength="10"
+					type="translate"
+					tag="div"
+				>
+					<span class="icon-violet" />
+				</kinesis-element>
+				<kinesis-element
+					:strength="30"
+					type="translate"
+					tag="div"
+				>
+					<span class="icon-blue" />
+				</kinesis-element>
+			</kinesis-container>
+		`
+	});
+
+	new Vue({ data() { return {
+		message: 'hello world'
+	}}}).$mount('#app')
+</script>
+</head>
+<body>
+	<div id='app'>
+		<test-kinesis></test-kinesis>
+	</div>
+</body>
+</html>

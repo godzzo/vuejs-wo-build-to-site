@@ -1,0 +1,81 @@
+<html>
+<head>
+<script type="module">
+import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
+
+const Fragment = {
+	install(Vue) {
+		// install the teleporter
+    Vue.directive('fragment', {
+      inserted(element) {
+        const fragment = document.createDocumentFragment();
+      	Array.from(element.childNodes).forEach(child => fragment.appendChild(child));
+        element.parentNode.insertBefore(fragment, element);
+        element.parentNode.removeChild(element);
+      }
+    })
+
+
+    Vue.component('vue-fragment', {
+      template: `<div v-fragment><slot /></div>`
+    })
+  }
+}
+
+Vue.use(Fragment);
+
+Vue.component('trial', {
+	template: `
+  <vue-fragment>
+		<span>{{ message }}</span>
+    <input type="text" v-model="message" />
+  </vue-fragment>
+  `,
+  
+  data() { return {
+  	message: 'hello world'
+  }}
+})
+
+
+
+new Vue({ data() { return {
+  message: 'hello world'
+}}}).$mount('#app')
+</script>
+
+<style>
+body {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+li {
+  margin: 8px 0;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+del {
+  color: rgba(0, 0, 0, 0.3);
+}
+</style>
+</head>
+
+<body>
+  <div id='app'>
+    <trial></trial>
+  </div>
+</body>
+</html>

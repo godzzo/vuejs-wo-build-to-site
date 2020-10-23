@@ -5,11 +5,11 @@
 </head>
 <body>
 	<div id='app'>
-		<ol>
-			<li>
-				<router-link to="about" >About Page</router-link>
-			</li>
-		</ol>
+		<div>
+			<div> <router-link to="/" >Home Page</router-link> </div>
+			<div> <router-link to="/Category" >Category Page</router-link> </div>
+			<div> <router-link to="/About" >About Page</router-link> </div>
+		</div>
 		<test
 			v-for="item in [1, 2, 3]"
 			title="Hello World"

@@ -13,10 +13,8 @@ Vue.use(VueRouter);
 const router = new VueRouter({
 	mode: "history",
 	routes: [
-		{
-			path: "/about",
-			component: () => import("./pages/About.js")
-		}
+		{ path: "/About", component: () => import("./pages/About.js") },
+		{ path: "/Category", component: () => import("./pages/Category.js") }
 	]
 });
 

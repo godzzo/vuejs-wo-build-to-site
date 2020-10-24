@@ -1,12 +1,14 @@
 export default {
 	components: {
     Cooking: () => import("../components/Cooking.js"),
-    Music: () => import("../components/Music.js")
+    Music: () => import("../components/Music.js"),
+    Day: () => import("../components/Day.js")
 	},
 	template: `
 <v-row>
   <Cooking></Cooking>
   <Music></Music>
+  <Day></Day>
 
   <v-card
     max-width="375"

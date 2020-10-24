@@ -10,7 +10,8 @@ const router = new VueRouter({
 		{ path: "/Sandra", component: () => import("./pages/Sandra.js") },
 		{ path: "/People", component: () => import("./pages/People.js") },
 		{ path: "/Discover", component: () => import("./pages/Discover.js") },
-		{ path: "/Calendar", component: () => import("./pages/Calendar.js") }
+		{ path: "/Calendar", component: () => import("./pages/Calendar.js") },
+		{ path: "/Basic", component: () => import("./pages/Basic.js") }
 	]
 });
 
@@ -28,7 +29,8 @@ new Vue({
 				{title: 'Sandra', link: '/Sandra', icon: 'mdi-home' },
 				{title: 'People', link: '/People', icon: 'mdi-home' },
 				{title: 'Discover', link: '/Discover', icon: 'mdi-home' },
-				{title: 'Calendar', link: '/Calendar', icon: 'mdi-home' }
+				{title: 'Calendar', link: '/Calendar', icon: 'mdi-home' },
+				{title: 'Basic', link: '/Basic', icon: 'mdi-home' }
 			]
 		};	
 	}
